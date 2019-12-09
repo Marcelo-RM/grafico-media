@@ -1,0 +1,31 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.containerGraph {
+    border: 2px solid #aaa;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+}
+
+.containerGraph HR {
+    width: 135%;
+    transform: translate(-10px, 0px);
+}
+
+.containerGraph ul {
+    margin: 0;
+    padding: 10px 10px 10px 0;
+    border-right: 2px solid #aaa;
+}
+
+.containerGraph li {
+    list-style: none;
+    line-height: 25px;
+}
+
+.svgContainer {
+    padding: 15px 2px;
+}
