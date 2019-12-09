@@ -10,11 +10,6 @@ body {
     padding: 0 10px;
 }
 
-.containerGraph HR {
-    width: 135%;
-    transform: translate(-10px, 0px);
-}
-
 .containerGraph ul {
     margin: 0;
     padding: 10px 10px 10px 0;
