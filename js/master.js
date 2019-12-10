@@ -9,7 +9,8 @@ window.onload = function(){
 
     createList(arrPessoas);
     createGraph(arrValues);
-}
+};
+
 function changedQuant(event){
     var qtd = event.selectedOptions[0].value;
     var arrPessoas = createArrayPessoas(qtd);
