@@ -1,10 +1,15 @@
 var cores = ['#820B8A', '#731DD8', '#FE820B', '#001F54', '#EF0000',
     '#669628', '#080500', '#4DB2EC', '#D11149', '#00FF00'];
 
-//Cria lista
-createList(nomes);
-createGraph(idades);
 
+window.onload = function(){
+    var qtd = 2;
+    var arrPessoas = createArrayPessoas(qtd);
+    var arrValues = createArrayValues(qtd);
+
+    createList(arrPessoas);
+    createGraph(arrValues);
+}
 function changedQuant(event){
     var qtd = event.selectedOptions[0].value;
     var arrPessoas = createArrayPessoas(qtd);
@@ -58,7 +63,8 @@ function createList(arrNomes) {
 }
 
 function createGraph(arrValues) {
-
+    //remove dados existentes
+    d3.select('svg')._groups[0][0].innerHTML = "";
     var alturaBarra = 20;
     var grafico = d3.select('svg')
         .attr('height', function () {
@@ -84,6 +90,9 @@ function createGraph(arrValues) {
 }
 
 function createGraphMedia(arrValues) {
+    //remove dados existentes
+    d3.select('.media')._groups[0][0].innerHTML = "";
+
     var media = 0;
     var soma = 0;
     arrValues.forEach(function (el) {
